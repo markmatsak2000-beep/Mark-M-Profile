@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Chelashaw</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <a href="./" class="nav-title">Joshua Chelashaw</a>          
+                <div class="nav-links">
+                <a href="https://github.com/stu-jc" class="nav-link">Github</a>
+                <a href="resume/" class="nav-link">Resume</a> 
+                <a href="projects/" class="nav-link">Projects</a>
+                <a href="art/" class="nav-link">Art</a>
+                <a href="placeholder/" class="nav-link">Blog</a>
+                <a href="mailto:me@joshuachelashaw.com" class="nav-link">Email</a> 
+                <a href="https://linkedin.com/in/joshuachelashaw" class="nav-link">LinkedIn</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="intro">
+            <p>A curious creator. Interested in mathematics, network engineering and finance. Seeking to share knowledge, document the process of creating and collaborate on innovative projects.</p>
+        </section>
+
+        <main>
+            <section class="section">
+                <h2>Projects</h2>
+                <ul class="projects">
+                    <li class="project">
+                        <div class="project-title"><a href="https://github.com/DoMessWithProfile/GridCharge">GridCharge</a></div>
+                        <p class="project-description">iOS Application developed in Swift. <br>
+                        Established on the business idea of peer-peer EV charging as a solution to the shortcomings of Australia's EV charger network </p>
+                    </li>
+                    <li class="project">
+                        <div class="project-title"><a href="https://github.com/stu-jc/financial-health-factor-analysis">Factor Analysis Report</a></div>
+                        <p class="project-description">Python (NumPy, pandas), Jupyter, LaTeX • May 2024<br>
+                        Comprehensive statistical analysis evaluating relationships between factors and stock returns using information coefficient analysis. Applied machine learning with decision trees and assessed forecasting accuracy using 10-fold cross-validation. Produced professional-quality report with clean, well-documented code.</p>
+                    </li>
+                    <li class="project">
+                        <div class="project-title"><a href="placeholder.html">Ruigu Rentals</a></div>
+                        <p class="project-description">PHP, JavaScript, MySQL • Full-Stack Web Development<br>
+                        Luxury car rental platform with dynamic database integration. Built robust backend architecture using MySQL and developed interactive frontend features with PHP and JavaScript.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Currently</h2>
+                <p>Learning, learning and learning. 
+
+                    Balancing an IT Analyst role at <a href="https://nextgen.group/" target="_blank">NEXTGEN</a>, with 4th year studies in my double degree of Software Engineering & Finance at <a href="https://uts.edu.au/" target="_blank">UTS</a>.
+                    <br>
+                    I'll use this space to share my wins, failures, projects, and experiences, as I explore my curiosities.
+
+        
+                    <p>Cheers,<br>joshua</p>               
+                    </p>
+            </section>
+
+        <div class="contact">
+        <h2>Connect</h2>
+        <p>Get in touch with <a href="mailto:me@joshuachelashaw.com">me@joshuachelashaw.com</a></p>
+        </div>
+        </main>
+
+        <footer>
+
+
+            <div class="footer">
+                <p>&copy; 2025 Joshua Chelashaw</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // Handle different path scenarios
+            if (currentPath.includes('/resume/') && href.includes('resume')) {
+                link.classList.add('active');
+            } else if (currentPath.includes('/projects/') && href.includes('projects')) {
+                link.classList.add('active');
+            } else if (currentPath.includes('/art/') && href.includes('art')) {
+                link.classList.add('active');
+            } else if (currentPath.includes('/placeholder/') && href.includes('placeholder')) {
+                link.classList.add('active');
+            } else if ((currentPath === '/' || currentPath === '/stu-jc.github.io/' || currentPath.endsWith('/index.html')) && 
+                       (href === './' || href === 'index.html')) {
+                // This is the home page
+                const homeLink = document.querySelector('.nav-title');
+                if (homeLink) homeLink.classList.add('active');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
